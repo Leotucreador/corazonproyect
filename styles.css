@@ -13,6 +13,11 @@ h1{
     font-weight: 900;
     position: absolute;
     top: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    position: absolute;
+    top: 25rem;
 }
 .heart-container {
     position: relative;
