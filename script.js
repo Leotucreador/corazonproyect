@@ -52,7 +52,6 @@ function animate() {
 }
 
 animate();
-
 const heart = document.querySelector('.heart');
 const audio = document.querySelector('audio');
 
