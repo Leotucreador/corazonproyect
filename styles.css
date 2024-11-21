@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff6b6b, #ff8787);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+h1{
+    font-size: 5rem;
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+}
+.heart-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #ff0044;
+    transform: rotate(45deg);
+    animation: pulse 1.5s infinite;
+    transform-origin: center;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #ff0044;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+}
+
+.heart:after {
+    left: -50px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.2);
+    }
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* El canvas se coloca detrás del corazón */
+}
