@@ -9,17 +9,17 @@ const colors = ['#ff0044', '#ff6b6b', '#ff8787', '#ffc1c1'];
 
 class Particle {
     constructor() {
-        this.x = canvas.width / 2 + Math.random() * 150 - 75; // Mayor dispersión
+        this.x = canvas.width / 2 + Math.random() * 150 - 75;
         this.y = canvas.height / 2 + Math.random() * 150 - 75;
-        this.size = Math.random() * 6 + 2; // Partículas más grandes
-        this.speedX = Math.random() * 3 - 1.5; // Mayor velocidad horizontal
-        this.speedY = Math.random() * 3 - 1.5; // Mayor velocidad vertical
+        this.size = Math.random() * 6 + 2;
+        this.speedX = Math.random() * 3 - 1.5;
+        this.speedY = Math.random() * 3 - 1.5;
         this.color = colors[Math.floor(Math.random() * colors.length)];
     }
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        if (this.size > 0.2) this.size -= 0.05; // Disminución más lenta
+        if (this.size > 0.2) this.size -= 0.05;
     }
     draw() {
         ctx.fillStyle = this.color;
@@ -30,7 +30,6 @@ class Particle {
 }
 
 function handleParticles() {
-    // Generar más partículas por ciclo
     for (let i = 0; i < 5; i++) {
         particlesArray.push(new Particle());
     }
@@ -39,7 +38,6 @@ function handleParticles() {
         particlesArray[i].update();
         particlesArray[i].draw();
 
-        // Eliminar partículas muy pequeñas
         if (particlesArray[i].size <= 0.2) {
             particlesArray.splice(i, 1);
             i--;
@@ -48,9 +46,16 @@ function handleParticles() {
 }
 
 function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpieza de fondo
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticles();
     requestAnimationFrame(animate);
 }
 
 animate();
+
+const heart = document.querySelector('.heart');
+const audio = document.querySelector('audio');
+
+heart.addEventListener('click', () => {
+    audio.play(); // Reproduce el audio
+});
