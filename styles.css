@@ -37,7 +37,7 @@ audio {
     align-items: center;
 }
 
-.heart {
+.corazon {
     position: relative;
     width: 100px;
     height: 100px;
@@ -47,8 +47,8 @@ audio {
     transform-origin: center;
 }
 
-.heart:before,
-.heart:after {
+.corazon:before,
+.corazon:after {
     content: "";
     position: absolute;
     width: 100px;
@@ -57,44 +57,49 @@ audio {
     border-radius: 50%;
 }
 
-.heart:before {
+.corazon:before {
     top: -50px;
     left: 0;
 }
 
-.heart:after {
+.corazon:after {
     left: -50px;
     top: 0;
 }
 
 @keyframes pulse {
     0%, 100% {
-        transform: rotate(45deg) scale(1);
+        transform: rotate(45deg) scale(1.5);
     }
     50% {
-        transform: rotate(45deg) scale(1.2);
+        transform: rotate(45deg) scale(0.5);
     }
+    
 }
 
 canvas {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1; /* El canvas se coloca detrás del corazón */
+    z-index: -1;
 }
 @media (min-width: 300px) and (max-width: 900px){
     body{
         flex-direction: column;
-        color: aliceblue;
         width: 100vw;
         height: 100vh;
+
     }
     h1{
         font-size: 2.4rem;
-        margin-top: 6rem;
+        margin-top: 4rem;
+        background: linear-gradient(to bottom, #ad101c, #d728c7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     p{
         color: chocolate;
-        margin-top: 3rem;
+        font-weight: bold;
+        margin-top: 1rem;
     }
 }

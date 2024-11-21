@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const colors = ['#ff0044', '#ff6b6b', '#ff8787', '#ffc1c1'];
+const colors = ['#ff0044', 'blue', '#ff8787', 'red', 'pink','#e280e5c2'];
 
 class Particle {
     constructor() {
@@ -52,9 +52,9 @@ function animate() {
 }
 
 animate();
-const heart = document.querySelector('.heart');
+const corazon = document.querySelector('.corazon');
 const audio = document.querySelector('audio');
 
-heart.addEventListener('click', () => {
-    audio.play(); // Reproduce el audio
+corazon.addEventListener('click', () => {
+    audio.play();
 });
