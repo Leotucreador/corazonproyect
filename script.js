@@ -53,8 +53,23 @@ function animate() {
 
 animate();
 const corazon = document.querySelector('.corazon');
-const audio = document.querySelector('audio');
+
+const audios = [
+    document.getElementById('audio1'),
+    document.getElementById('audio2'),
+    document.getElementById('audio3'),
+    document.getElementById('audio4'),
+    document.getElementById('audio5')
+];
+
+function pauseAllAudios() {
+    audios.forEach(audio => audio.pause());
+}
 
 corazon.addEventListener('click', () => {
-    audio.play();
+    pauseAllAudios();
+    const randomIndex = Math.floor(Math.random() * audios.length);
+    const randomAudio = audios[randomIndex]; 
+    randomAudio.currentTime = 0; 
+    randomAudio.play();
 });

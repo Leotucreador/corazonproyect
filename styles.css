@@ -19,13 +19,7 @@ p{
     position: absolute;
     top: 25rem;
 }
-audio {
-    width: 10rem;
-    height: 50px;
-    border: 2px solid #ff0000;
-    border-radius: 10px;
-    background-color: #f3f3f3;
-    position: fixed;
+audio{
     display: none;
 }
 .heart-container {
@@ -101,6 +95,6 @@ canvas {
         color:#d728c7;
         font-weight: bold;
         position: absolute;
-        top: 25rem;
+        top : 25rem;
     }
 }
