@@ -1,12 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ff6b6b, #ff8787);
+    background-color:black;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    color: aliceblue;
 }
 h1{
     font-size: 5rem;
@@ -36,7 +37,7 @@ audio{
     width: 100px;
     height: 100px;
     background: #ff0044;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     animation: pulse 1.5s infinite;
     transform-origin: center;
 }
@@ -82,17 +83,13 @@ canvas {
         flex-direction: column;
         width: 100vw;
         height: 100vh;
-
+        color: aliceblue;
     }
     h1{
         font-size: 2.4rem;
         margin-top: 4rem;
-        background: linear-gradient(to bottom, #ad101c, #d728c7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
     p{
-        color:#d728c7;
         font-weight: bold;
         position: absolute;
         top : 25rem;
