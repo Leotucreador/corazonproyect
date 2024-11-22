@@ -76,7 +76,7 @@ corazon.addEventListener('click', () => {
     mensaje.style.position = 'absolute'; 
     mensaje.style.top = `${Math.random() * window.innerHeight}px`; 
     mensaje.style.left = `${Math.random() * window.innerWidth}px`; 
-    mensaje.style.color = 'white';
+    mensaje.style.color = 'darkgreen';
     mensaje.style.fontSize = '26px';
     document.body.appendChild(mensaje);
 
