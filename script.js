@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const colors = ['#ff0044', 'blue', '#ff8787', 'red', 'pink','#e280e5c2'];
+const colors = ['red', 'pink','white','gold'];
 
 class Particle {
     constructor() {
@@ -71,4 +71,14 @@ corazon.addEventListener('click', () => {
     const randomAudio = audios[randomIndex]; 
     randomAudio.currentTime = 0; 
     randomAudio.play();
+    const mensaje = document.createElement('h3');
+    mensaje.textContent = 'yo no se que decir asi que mejor escuchalo';
+    mensaje.style.position = 'absolute'; 
+    mensaje.style.top = `${Math.random() * window.innerHeight}px`; 
+    mensaje.style.left = `${Math.random() * window.innerWidth}px`; 
+    mensaje.style.color = 'white';
+    mensaje.style.fontSize = '26px';
+    document.body.appendChild(mensaje);
+
+    setTimeout(() => mensaje.remove(), 2000);
 });
