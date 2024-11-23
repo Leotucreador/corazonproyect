@@ -104,5 +104,6 @@ canvas {
         font-family: 'Times New Roman', Times, serif;
         margin-top: 2rem;
         font-weight: bold;
+        width: 22rem;
     }
 }

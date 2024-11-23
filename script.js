@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const particlesArray = [];
-const colors = ['red', 'pink','white','gold'];
+const colors = ['red', 'pink', 'white', 'gold'];
 
 class Particle {
     constructor() {
@@ -52,13 +52,23 @@ function animate() {
 }
 
 animate();
+
 const corazon = document.querySelector('.corazon');
 
 const audios = [
     document.getElementById('audio1'),
     document.getElementById('audio2'),
     document.getElementById('audio3'),
-    document.getElementById('audio4')
+    document.getElementById('audio4'),
+    document.getElementById('audio5')
+];
+
+const mensajes = [
+    'Yo no diré nada porque con esta se dice todo',
+    'aceptame tal como soy',
+    'hay miles pero ninguno es yo y lo sabes',
+    'una escapadita y ya',
+    '¡te dediqué MAI y me pusiste a escuchar...'
 ];
 
 function pauseAllAudios() {
@@ -68,16 +78,23 @@ function pauseAllAudios() {
 corazon.addEventListener('click', () => {
     pauseAllAudios();
     const randomIndex = Math.floor(Math.random() * audios.length);
-    const randomAudio = audios[randomIndex]; 
-    randomAudio.currentTime = 0; 
+    const randomAudio = audios[randomIndex];
+    randomAudio.currentTime = 0;
     randomAudio.play();
+
     const mensaje = document.createElement('h3');
-    mensaje.textContent = 'yo no se que decir asi que mejor escuchalo';
-    mensaje.style.position = 'absolute'; 
-    mensaje.style.top = `${Math.random() * window.innerHeight}px`; 
-    mensaje.style.left = `${Math.random() * window.innerWidth}px`; 
+    mensaje.textContent = mensajes[randomIndex]; 
+
+    const maxTop = window.innerHeight - 50;
+    const maxLeft = window.innerWidth - 200; 
+
+    mensaje.style.position = 'absolute';
+    mensaje.style.top = `${Math.random() * maxTop}px`;
+    mensaje.style.left = `${Math.random() * maxLeft}px`;
     mensaje.style.color = 'darkgreen';
     mensaje.style.fontSize = '26px';
+    mensaje.style.width = '13rem'
+
     document.body.appendChild(mensaje);
 
     setTimeout(() => mensaje.remove(), 2000);
