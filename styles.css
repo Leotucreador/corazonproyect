@@ -81,7 +81,7 @@ canvas {
     left: 0;
     z-index: -1;
 }
-@media (min-width: 310px) and (max-width: 780px){
+@media (min-width: 300px) and (max-width: 900px){
     body{
         width: 100vw;
         height: 100vh;
