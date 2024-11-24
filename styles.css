@@ -87,6 +87,10 @@ canvas {
         height: 100vh;
         color: black;
         background-color: cornsilk;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: static;
     }
     h1{
         font-size: 2rem;
