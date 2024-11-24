@@ -60,15 +60,44 @@ const audios = [
     document.getElementById('audio2'),
     document.getElementById('audio3'),
     document.getElementById('audio4'),
-    document.getElementById('audio5')
+    document.getElementById('audio5'),
+    document.getElementById('audio6'),
+    document.getElementById('audio7'),
+    document.getElementById('audio8'),
+    document.getElementById('audio9'),
+    document.getElementById('audio10'),
+    document.getElementById('audio11'),
+    document.getElementById('audio12'),
+    document.getElementById('audio13'),
+    document.getElementById('audio14'),
+    document.getElementById('audio15'),
+    document.getElementById('audio16'),
+    document.getElementById('audio17'),
+    document.getElementById('audio18'),
+    document.getElementById('audio19')
 ];
 
 const mensajes = [
-    'Yo no diré nada porque con esta se dice todo',
-    'aceptame tal como soy',
-    'hay miles pero ninguno es yo y lo sabes',
-    'una escapadita y ya',
-    '¡te dediqué MAI y me pusiste a escuchar...'
+    'si una no te convence te daré 10',
+    'zumbaaaaaaaaaaa',
+    'contigo si siento esta cancion',
+    'un amor como el nuestro',
+    'en ti encuentro la inspiracion',
+    'aish Martin no decepcionas',
+    'perdido como el indio en la colina',
+    'te seguiré buscando solamente para decirte...',
+    'fuiste y serás siempre la razon de mi existir',
+    'que tal si te enamoras de...',
+    'eres el punto en una noche sin lucero',
+    'locaaa',
+    'por ti doy hasta lo que no tengo',
+    'sabes que como yo no hay otro',
+    'zumbaaaaaaaaaaaaax2',
+    'todo de usted',
+    'soy tuyo y lo sabes',
+    'mami tu estas buena y ¿como hago?',
+    '...'
+
 ];
 
 function pauseAllAudios() {
